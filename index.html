@@ -22,5 +22,12 @@
     <p id="message"></p>
     <button id="reset">Restart Game</button>
     <script src="script.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(() => {
+            console.log("Service Worker Registered");
+        });
+    }
+    </script>
 </body>
 </html>
